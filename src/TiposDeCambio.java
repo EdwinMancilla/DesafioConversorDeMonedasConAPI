@@ -1,7 +1,5 @@
-public record TiposDeCambio(int ARS,
-                            int BOB,
-                            int BRL,
-                            int CLP,
-                            int COP,
-                            int USD) {
+public record TiposDeCambio(String result,
+                            String base_code,
+                            ConversionRates conversion_rates) {
+
 }

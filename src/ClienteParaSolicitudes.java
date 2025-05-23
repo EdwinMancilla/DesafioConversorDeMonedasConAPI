@@ -8,13 +8,8 @@ import java.net.http.HttpResponse;
 
 public class ClienteParaSolicitudes {
 
-    public TiposDeCambio tiposDeCambio(int ARS,
-                                       int BOB,
-                                       int BRL,
-                                       int CLP,
-                                       int COP,
-                                       int USD) {
-        URI direccion = URI.create("https://v6.exchangerate-api.com/v6/6e96f732f4112e9ac8008af8/latest/" );
+    public TiposDeCambio tiposDeCambio() {
+        URI direccion = URI.create("https://v6.exchangerate-api.com/v6/6e96f732f4112e9ac8008af8/latest/USD");
 
 
         HttpClient client = HttpClient.newHttpClient();
@@ -30,6 +25,4 @@ public class ClienteParaSolicitudes {
             throw new RuntimeException(e);
         }
     }
-
-
 }
